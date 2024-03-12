@@ -147,3 +147,8 @@ cls_project.html
 eda_project.html
 cluster_project.html
 NN_For_Mobile_Brochure_A4.pdf
+DL_CNN.html
+
+# Temporary ignores
+DL_ANN.md
+DL_RNN.md

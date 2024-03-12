@@ -1,4 +1,4 @@
-$files = @("index")
+$files = @("index", "DL_CNN")
 $html_files = $files | ForEach-Object -Process {".\$_.html"}
 $data_files = @("favicon-32x32.png")
 
