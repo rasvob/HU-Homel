@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Learning</title>
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+
+    <style>
+        /* Fira Code */
+        @font-face {
+        font-family: 'Fira Code';
+        font-style: normal;
+        src: local('Fira Code'), url('maize/FiraCode-Regular.ttf') format('ttf');
+        }
+
+        body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        }
+
+        /* 全局属性 */
+        :root{
+        --select-text-bg-color: #57CC99;
+        --bg-color:  #fafafa;                   /*change background*/
+        --text-color: #333333;                  /*change text color*/
+        --md-char-color: #C7C5C5;               /*change color of meta characetrs like `*` in markdown */
+        --meta-content-color: #5b808d;          /*change color of meta contents like image text or link address in markdown */
+
+        --primary-color: #428bca;               /* color of primary buttons */
+        --primary-btn-border-color: #285e8e;
+        --primary-btn-text-color: #fff;
+
+        --window-border: 1px solid #eee;        /*border for sidebar, etc*/
+
+        --active-file-bg-color: #eee;           /*background color if list item in file tree or file list*/
+        --active-file-text-color: inherit;
+        --active-file-border-color: #777;
+
+        --side-bar-bg-color: var(--bg-color);     /*change background of sidebar*/
+        --item-hover-bg-color: rgba(229, 229, 229, 0.59); /*background of control items when hover, like menu in sidebar*/
+        --item-hover-text-color: inherit;
+        --monospace: monospace;                   /*monospace font for codes, fences*/
+        }
+        ::selection {
+            background:#57CC99;
+            color:white
+        }
+        ::-moz-selection {
+            background:#57CC99;
+            color:white
+        }
+        ::-webkit-selection {
+            background:#57CC99;
+            color:white
+        }
+
+        #write {
+        max-width: 914px;
+        font-size: 16px;
+        text-align: left;
+        letter-spacing: 0px;
+        font-family: "Fira Code", "微软雅黑","PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+
+        /*段落*/
+        #write p {
+        font-size: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin: 0;
+        line-height: 26px;
+        color: black;
+        }
+
+        /*  todo item 对齐 */
+        #write input[type="checkbox"] {
+        margin-top: calc(1em - 2px);
+        margin-right: 5px;
+        left: -3px;
+        }
+
+        /*标题*/
+        #write h1,
+        #write h2,
+        #write h3,
+        #write h4,
+        #write h5,
+        #write h6 {
+        margin: .72em 0;
+        padding: 0px;
+        font-weight: bold;
+        color: black;
+        }
+        #write h1 {
+        margin: 1.2em 0;
+        font-size: 2rem;
+        /* text-align: center; */
+        }
+        #write h2::before{
+        /* content: "✔"; */
+        font-weight: bold;
+        color: #57CC99;
+        margin-right: 4px
+        }
+        #write h2 {
+        font-size: 1.7rem;
+        margin: 1em 0;
+        }
+        #write h2 span {
+        font-weight: bold;
+        color: #333;
+        padding: 3px 10px 1px;
+        }
+        
+        #write h3 {
+        font-size: 1.5rem;
+        }
+
+        #write h5::before{
+        content: "💡";
+        font-weight: bold;
+        color: #57CC99;
+        margin-right: 4px
+        }
+
+        #write h4 {
+        font-size: 1.25rem;
+        }
+        #write h5 {
+        font-size: 1rem;
+        }
+        #write h6 {
+        font-size: 1rem;
+        }
+
+        /* 列表 */
+        #write ul,
+        #write ol {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        padding-left: 40px;
+        color: black;
+        }
+        #write ul {
+        list-style-type: disc;
+        }
+        #write ul ul {
+        list-style-type: square;
+        }
+        #write ol {
+        list-style-type: decimal;
+        }
+        /* 列表内容 */
+        #write li section {
+        font-size:15px;
+        }
+
+        /* 字体加粗 */
+        /* #write strong::before {
+        content: '「';
+        } */
+
+        #write strong {
+        color: #38A3A5;
+        font-weight: bold;
+        }
+
+        /* #write strong::after {
+        content: '」';
+        } */
+
+        /*引用*/
+        #write blockquote {
+        margin-bottom: 16px;
+        margin-top: 16px;
+        padding: 10px 10px 10px 20px;
+        font-size: 0.9em;
+        background: #fff9f9;
+        border-left: 3px solid #57CC99;
+        color: #6a737d;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        }
+        #write blockquote p {
+        line-height: 26px;
+        }
+
+        /* 超链接 */
+        #write a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #38A3A5;
+        border-bottom: 1px solid #38A3A5;
+        }
+
+        /* 分割线 */
+        #write hr {
+        height: 1px;
+        padding: 0;
+        border: none;
+        text-align: center;
+        background-image: linear-gradient(to right,rgba(231, 93, 109,0.3),rgba(255, 159, 150,0.75),rgba(255, 216, 181,0.3));
+        }
+
+        /* background-color 由 rgba 转为 HEX*/
+        #write code{
+        font-size: 14px;
+        color:  #333;
+        background-color: #57CC9933;
+        }
+
+        /* 行内代码 */
+        #write p code,
+        #write span code,
+        #write li code {
+        word-wrap: break-word;
+        padding: 2px 4px;
+        border-radius: 4px;
+        margin: 0 2px;
+        word-break: break-all;
+        }
+
+        /* 文章插图 */
+        #write img {
+        display: block;
+        margin: 0 auto;
+        width: 85%;
+        max-width: 100%;
+        border-radius: 5px;
+        box-shadow:0px 4px 12px #84A1A8;
+        border: 0px;
+        }
+
+        #write table tr {
+        border: 0;
+        border-top: 1px solid #ccc;
+        background-color: white;
+        }
+        #write table tr:nth-child(2n) {
+        background-color: #F8F8F8;
+        }
+        #write table tr th,
+        #write table tr td {
+        font-size: 16px;
+        line-height: 1.5;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        text-align: left;
+        }
+        #write table tr th {
+        font-weight: bold;
+        background-color: #f0f0f0;
+        }
+
+
+        /* 上角标 */
+        #write .md-footnote {
+        font-weight: bold;
+        color: #38A3A5;
+        }
+        #write .md-footnote > .md-text:before {
+        content: '['
+        }
+        #write .md-footnote > .md-text:after {
+        content: ']'
+        }
+
+
+        /* 下角标 */
+        #write .md-def-name {
+        padding-right: 1.8ch;
+        }
+        #write .md-def-name:before {
+        content: '[';
+        color: #000;
+        }
+        #write .md-def-name:after {
+        color: #000;
+        }
+
+
+        /* 代码块主题 */
+        code, .md-fences {
+            padding: .5em;
+            /* border: 1px solid #ccc; */
+            padding: .1em;
+            border-radius: 5px;
+            margin-left: 0.2em;
+        margin-right: 0.2em;
+        font-family: "Fira Code", "微软雅黑","PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+        .md-fences {
+        margin: 0 0 20px;
+        background-color: #292b35;
+        color: rgb(236, 236, 236);
+            /* font-size: 1em; */
+            padding: 0.3em 1em;
+        padding-top: 0.4em;
+        box-shadow: 0px 4px 9px grey;
+        }
+        .CodeMirror div.CodeMirror-cursor {
+        margin-left: 4.6px;
+        border-left: 1px solid #7ba0f0;
+        z-index: 5;
+        }
+        .cm-s-inner div.CodeMirror-selected {
+        background: rgba(113, 124, 180, 0.2);
+        }
+        .CodeMirror-code{
+        margin-left: 5px;
+        }
+        .cm-s-inner .cm-keyword {
+        color: #c792ea;
+        font-weight: 450;
+        }
+        .cm-s-inner .cm-operator {
+        color: #89ddff;
+        }
+        .cm-s-inner .cm-variable-2 {
+        color: #eeffff;
+        }
+        .cm-s-inner .cm-variable-3,
+        .cm-s-inner .cm-type {
+        color: #f07178;
+        }
+        .cm-s-inner .cm-builtin {
+        color: #ffcb6b;
+        }
+        .cm-s-inner .cm-atom {
+        color: #f78c6c;
+        }
+        .cm-s-inner .cm-number {
+        color: #ff5370;
+        }
+        .cm-s-inner .cm-def {
+        color: #82aaff;
+        }
+        .cm-s-inner .cm-string {
+        color: #c3e88d;
+        }
+        .cm-s-inner .cm-string-2 {
+        color: #f07178;
+        }
+        .cm-s-inner .cm-comment {
+        color: #676e95;
+        }
+        .cm-s-inner .cm-variable {
+        color: #f07178;
+        }
+        .cm-s-inner .cm-tag {
+        color: #ff5370;
+        }
+        .cm-s-inner .cm-meta {
+        color: #ffcb6b;
+        }
+        .cm-s-inner .cm-attribute {
+        color: #c792ea;
+        }
+        .cm-s-inner .cm-property {
+        color: #c792ea;
+        }
+        .cm-s-inner .cm-qualifier {
+        color: #decb6b;
+        }
+        .cm-s-inner .cm-variable-3,
+        .cm-s-inner .cm-type {
+        color: #decb6b;
+        }
+        .cm-s-inner .cm-error {
+        color: rgba(255, 255, 255, 1);
+        background-color: #e9405c;
+        }
+
+        /*流程图样式*/
+        pre[lang='sequence'],
+        pre[lang='flow'],
+        pre[lang='mermaid']
+        {
+        background: #ffffff;
+        color: #333333;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="write">
+        <h1>Final Project Information <a href="https://homel.vsb.cz/~svo0175/">🠔</a></h1>
+
+<ul>
+<li><p>You can get <strong>20 to 40</strong> points</p></li>
+<li><p>🎯 Goal of the final project is to create more thorough analysis of the chosen dataset compared to the previous two smaller projects</p></li>
+<li><p>💡 The dataset selection is up to you however it must come from image, text or time series domain</p></li>
+<li><p>📒 Every project must include brief description of the dataset so you get to know the data you are working with</p>
+
+<ul>
+<li>Number of instances, number of classes and class balance information</li>
+<li>Examples of the data</li>
+</ul></li>
+<li><p>🔎 What model performance metrics have you decided to use?</p>
+
+<ul>
+<li>e.g. Accuracy, Precision, Recall, F1-score etc.</li>
+<li>📒 State which one of the scores is the most important from your point of view given the class balance, task, ... in a Markdown cell!</li>
+</ul></li>
+<li><p>🎯 Try multiple different deep learning models</p>
+
+<blockquote>
+  <p>🚀 <strong>Creativity is king in the final project</strong></p>
+</blockquote>
+
+<ul>
+<li>The first models should be built from scratch, i.e. create your own architecture and train the models to have some baseline results
+<ul>
+<li>💡 The project will include hyper parameter tuning so try different batch sizes, optimizers, etc. and document everything accordingly
+<ul>
+<li>i.e. 📒 tables with results, plots, ...</li>
+</ul></li>
+</ul></li>
+<li>🚀 Other models will employ transfer learning techniques
+<ul>
+<li>💡 Try to fine-tune multiple pre-trained models (or even embeddings in case of text data)</li>
+<li>You can also try to pre-process the data if needed, use re-sampling, data augmentation and so on</li>
+</ul></li>
+<li>📌 Compare the models and summarize your results</li>
+</ul></li>
+</ul>
+
+<h2>General Information</h2>
+
+<p><strong>✅ Mandatory part of every project is a summary at the end in which you summarize the most interesting insight obtained</strong>.</p>
+
+<p>Upload a <strong>📝 Jupyter Notebook with descriptions included</strong> or a PDF report + source codes.</p>
+
+<p>💡 Estimated time for the project is 10-15h, this value heavily depends on your skill, but you can use it as a guidance for a project size.</p>
+
+<blockquote>
+  <h4><strong>🎯 Deadline is 9. 6. 2024 🍀</strong></h4>
+</blockquote>
+
+<p><strong>Upload the project to:</strong></p>
+
+<ul>
+<li><p>Dropbox:</p>
+
+<ul>
+<li>Thu, 09:00: <a href="https://www.dropbox.com/request/4OEqaNked208tMcRQrQE">Dropbox</a></li>
+<li>Thu, 12:30: <a href="https://www.dropbox.com/request/sJEQEkKlXQO6yOaV3LQI">Dropbox</a></li>
+</ul></li>
+<li><p><strong>💡 Dropbox will ask you for your name - use your VSB login please 👍</strong></p></li>
+<li><p>🎯 The final project will be presented, please choose one of the proposed dates using the Google Form URL below</p>
+
+<ul>
+<li>There are 18 slots for each day
+<ul>
+<li><strong>Please, check the table linked to the form if there is a free slot before you choose the day 👍</strong></li>
+</ul></li>
+<li>https://forms.gle/2gPXAugWZJ56qk3t5</li>
+</ul></li>
+</ul>
+
+<h2>Dataset</h2>
+
+<blockquote>
+  <p><em>Select a dataset of your individual choice at <a href="https://www.kaggle.com/">Kaggle</a> (or other data source) and drop me an email so I can approve your choice or give some recommendation.</em></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>If you work with DL in your semestral project, it is possible to use this in this project as well. Just drop me an email and we will solve it individually.</strong></p>
+</blockquote>
+
+    </div>
+</body>
+</html>

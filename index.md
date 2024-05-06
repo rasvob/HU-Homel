@@ -6,6 +6,12 @@
 ## Project - CNN
 [Information about the project](/~svo0175/DL_CNN.html)
 
+## Project - RNN
+[Information about the project](/~svo0175/DL_RNN.html)
+
+## Project - Final
+[Information about the project](/~svo0175/DL_ANN.html)
+
 ### Scores from the exercises
 [Scores from the exercises](https://docs.google.com/spreadsheets/d/1joytXot1BPn9szQd54xI6MQeIbBre4AUW10lyTtlkvA/edit?usp=sharing)
 
