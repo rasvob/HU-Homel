@@ -13,7 +13,7 @@
 [Information about the project](/~svo0175/DL_ANN.html) -->
 
 ### Scores from the exercises
-[Scores from the exercises]()
+[Scores from the exercises](https://docs.google.com/spreadsheets/d/1ENzLPUiDYae7WQkXPfP2Lo7Jv3tsO7pgK0uCH7259GY/edit?usp=sharing)
 
 ### Course website
 [https://homel.vsb.cz/~pla06/](https://homel.vsb.cz/~pla06/)
