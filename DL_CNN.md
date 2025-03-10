@@ -12,11 +12,11 @@
 * 🎯 Try minimally 2 different models
     * 🚀 The first model should be built from scratch, i.e. create your own architecture and train the model
       * If you perform various experiments or hyper-parameter tuning make sure to include everyting in the Notebook step by step with some brief comments about the experiments 
-        * 💡 e.g. effect of BatchNormalization,layer sizes or optimizer choice on accuracy,train time, ...
+        * 💡 e.g. effect of BatchNormalization, layer sizes or optimizer choice on accuracy, train time, ...
     * 🚀 The second model will use transfer learning techniques
       * You can try any model you wish, e.g. ResNet50, Inception, MobileNet, etc.
         * Take a look at [this list](https://keras.io/api/applications/) and try at least one of them
-      * 📌 Fine tune the model for your dataset and compare it with the model that you created from scratch
+      * 📌 Fine tune the model for your dataset and compare it with the model that you have created from scratch
 
 
 ## General Information
@@ -26,13 +26,13 @@ Upload a **📝 Jupyter Notebook with descriptions included** or a PDF report + 
 
 💡 Estimated time for the project is 5-10h, this value heavily depends on your skill, but you can use it as a guidance for a project size.
 
-> #### **🎯 Deadline is 21. 4. 2024 🍀**
+> #### **🎯 Deadline is 20. 4. 2025 🍀**
   
 **Upload the project to:**
 
 * Dropbox:
-  * Thu, 09:00: [Dropbox](https://www.dropbox.com/request/BhzYBya0uOBMeR0RI6Y2)
-  * Thu, 12:30: [Dropbox](https://www.dropbox.com/request/ABy9iJLO6jNmWWABQ6Id)
+  * Mon, 09:00: [Dropbox](https://www.dropbox.com/request/zFK6zI8cqsfWyenbzjrf)
+  * Wed, 14:15: [Dropbox](https://www.dropbox.com/request/zD7tdnOLIsFxx1NxTtyr)
 
 * **💡 Dropbox will ask you for your name - use your VSB login please 👍**
   
@@ -52,10 +52,7 @@ Upload a **📝 Jupyter Notebook with descriptions included** or a PDF report + 
 
 > Use **ClassId** column as image class
 
-## 4 - Horses Or Humans Dataset
-[https://www.kaggle.com/datasets/sanikamal/horses-or-humans-dataset](https://www.kaggle.com/datasets/sanikamal/horses-or-humans-dataset)
-
-## 5 - LEGO Minifigures
+## 4 - LEGO Minifigures
 [https://www.kaggle.com/datasets/ihelon/lego-minifigures-classification](https://www.kaggle.com/datasets/ihelon/lego-minifigures-classification)
 
 ## Dataset of individual selection
