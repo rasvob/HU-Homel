@@ -24,13 +24,13 @@ Upload a **📝 Jupyter Notebook with descriptions included** or a PDF report + 
 
 💡 Estimated time for the project is 5-10h, this value heavily depends on your skill, but you can use it as a guidance for a project size.
 
-> #### **🎯 Deadline is 26. 5. 2024 🍀**
+> #### **🎯 Deadline is 25. 5. 2025 🍀**
   
 **Upload the project to:**
 
 * Dropbox:
-  * Thu, 09:00: [Dropbox](https://www.dropbox.com/request/3QCQnymp2gJeAy0ILqLW)
-  * Thu, 12:30: [Dropbox](https://www.dropbox.com/request/6f8aeC6AewMQHveCBCWX)
+  * Mon, 09:00: [Dropbox](https://www.dropbox.com/request/pNB6V4jGTJ5W9gZzqdDG)
+  * Wed, 14:15: [Dropbox](https://www.dropbox.com/request/bzrr3OpTMkXFRmC70N53)
 
 * **💡 Dropbox will ask you for your name - use your VSB login please 👍**
   
