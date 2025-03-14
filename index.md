@@ -3,9 +3,10 @@
 ## 📊 Exercises 
 💡 Information about the exercises can be found on the course [GitHub](https://github.com/rasvob/VSB-FEI-Deep-Learning-Exercises)
 
-<!-- ## Project - CNN
+## Project - CNN
 [Information about the project](/~svo0175/DL_CNN.html)
 
+<!-- 
 ## Project - RNN
 [Information about the project](/~svo0175/DL_RNN.html)
 
