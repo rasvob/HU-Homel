@@ -19,6 +19,7 @@
   * The first models should be built from scratch, i.e. create your own architecture and train the models to have some baseline results
     * 💡 The project will include hyper parameter tuning so try different batch sizes, optimizers, etc. and document everything accordingly
       * i.e. 📒 tables with results, plots, ...
+      * 💡 You can use hyper-parameter tuning libraries, e.g., [Optuna](https://optuna.org/)
   * 🚀 Other models will employ transfer learning techniques
       * 💡 Try to fine-tune multiple pre-trained models (or even embeddings in case of text data)
       * You can also try to pre-process the data if needed, use re-sampling, data augmentation and so on
@@ -31,19 +32,19 @@ Upload a **📝 Jupyter Notebook with descriptions included** or a PDF report + 
 
 💡 Estimated time for the project is 10-15h, this value heavily depends on your skill, but you can use it as a guidance for a project size.
 
-> #### **🎯 Deadline is 9. 6. 2024 🍀**
+> #### **🎯 Deadline is 8. 6. 2025 🍀**
   
 **Upload the project to:**
 
 * Dropbox:
-  * Thu, 09:00: [Dropbox](https://www.dropbox.com/request/4OEqaNked208tMcRQrQE)
-  * Thu, 12:30: [Dropbox](https://www.dropbox.com/request/sJEQEkKlXQO6yOaV3LQI)
+  * Mon, 09:00: [Dropbox](https://www.dropbox.com/request/ZCgxEExv1BrwfJQZCkHZ)
+  * Wed, 14:15: [Dropbox](https://www.dropbox.com/request/WL0w5GRX1YgT3vM1PDEk)
 
 * **💡 Dropbox will ask you for your name - use your VSB login please 👍**
   
-* 🎯 The final project will be presented, please choose one of the proposed dates using the Google Form URL - [https://forms.gle/2gPXAugWZJ56qk3t5](https://forms.gle/2gPXAugWZJ56qk3t5)
+<!-- * 🎯 The final project will be presented, please choose one of the proposed dates using the Google Form URL - [https://forms.gle/2gPXAugWZJ56qk3t5](https://forms.gle/2gPXAugWZJ56qk3t5)
   * There are 18 slots for each day
-    * **Please, check the table linked to the form if there is a free slot before you choose the day 👍**
+    * **Please, check the table linked to the form if there is a free slot before you choose the day 👍** -->
 
 ## Dataset
 >  *Select a dataset of your individual choice at [Kaggle](https://www.kaggle.com/) (or other data source) and drop me an email so I can approve your choice or give some recommendation.*
