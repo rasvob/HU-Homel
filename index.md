@@ -6,10 +6,11 @@
 ## Project - CNN
 [Information about the project](/~svo0175/DL_CNN.html)
 
-<!-- 
+
 ## Project - RNN
 [Information about the project](/~svo0175/DL_RNN.html)
 
+<!-- 
 ## Project - Final
 [Information about the project](/~svo0175/DL_ANN.html) -->
 
