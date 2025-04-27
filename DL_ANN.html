@@ -417,15 +417,38 @@
 <ul>
 <li>💡 The project will include hyper parameter tuning so try different batch sizes, optimizers, etc. and document everything accordingly
 <ul>
-<li>i.e. 📒 tables with results, plots, ...</li>
+<li>i.e. 📒 Tables with results, plots, ...</li>
+<li>💡 Using hyperparameter optimization frameworks like <a href="https://optuna.org/">Optuna</a> is <strong>highly recommended</strong> for efficient tuning</li>
 </ul></li>
 </ul></li>
 <li>🚀 Other models will employ transfer learning techniques
 <ul>
-<li>💡 Try to fine-tune multiple pre-trained models (or even embeddings in case of text data)</li>
+<li>💡 Try to fine-tune multiple pre-trained models:
+<ul>
+<li>For image data: Use pre-trained models from Keras applications (ResNet, EfficientNet, etc.) and YOLO variants</li>
+<li>For text data: Leverage HuggingFace Transformers and word embeddings like GloVe, FastText, or Word2Vec</li>
+</ul></li>
 <li>You can also try to pre-process the data if needed, use re-sampling, data augmentation and so on</li>
 </ul></li>
-<li>📌 Compare the models and summarize your results</li>
+<li>📊 Implement experiment tracking for better organization and reproducibility
+<ul>
+<li>💡 Consider using tracking tools like <a href="https://www.comet.ml">Comet ML</a>, <a href="https://neptune.ai">Neptune.ai</a>, <a href="https://wandb.ai">Weights &amp; Biases</a>, or <a href="https://mlflow.org">MLflow</a> or <a href="https://www.tensorflow.org/tensorboard">TensorBoard</a></li>
+<li>Document model versions, hyperparameters, and performance metrics systematically</li>
+<li>Create visualization dashboards to compare experiment results efficiently</li>
+</ul></li>
+<li>📌 <strong>Compare the models and summarize your results</strong></li>
+<li>🚀 Create a deployment-ready inference pipeline
+<ul>
+<li>Select one of your models and export it (e.g., ONNX)</li>
+<li>Implement a simple inference class with a <code>predict</code> method that:
+<ul>
+<li>Takes raw input data</li>
+<li>Applies necessary preprocessing steps</li>
+<li>Feeds the processed data to the model</li>
+<li>Returns formatted predictions</li>
+</ul></li>
+<li>Document the pipeline usage with examples</li>
+</ul></li>
 </ul></li>
 </ul>
 
@@ -438,7 +461,7 @@
 <p>💡 Estimated time for the project is 10-15h, this value heavily depends on your skill, but you can use it as a guidance for a project size.</p>
 
 <blockquote>
-  <h4><strong>🎯 Deadline is 9. 6. 2024 🍀</strong></h4>
+  <h4><strong>🎯 Deadline is 8. 6. 2025 🍀</strong></h4>
 </blockquote>
 
 <p><strong>Upload the project to:</strong></p>
@@ -447,11 +470,11 @@
 <li><p>Dropbox:</p>
 
 <ul>
-<li>Thu, 09:00: <a href="https://www.dropbox.com/request/4OEqaNked208tMcRQrQE">Dropbox</a></li>
-<li>Thu, 12:30: <a href="https://www.dropbox.com/request/sJEQEkKlXQO6yOaV3LQI">Dropbox</a></li>
+<li>Mon, 09:00: <a href="https://www.dropbox.com/request/ZCgxEExv1BrwfJQZCkHZ">Dropbox</a></li>
+<li>Wed, 14:15: <a href="https://www.dropbox.com/request/WL0w5GRX1YgT3vM1PDEk">Dropbox</a></li>
 </ul></li>
 <li><p><strong>💡 Dropbox will ask you for your name - use your VSB login please 👍</strong></p></li>
-<li><p>🎯 The final project will be presented, please choose one of the proposed dates using the Google Form URL - <a href="https://forms.gle/2gPXAugWZJ56qk3t5">https://forms.gle/2gPXAugWZJ56qk3t5</a></p>
+<li><p>🎯 The final project will be presented, please choose one of the proposed dates using the Google Form URL - <a href="https://forms.gle/JmoNaWx7dL2QJsGJ9">https://forms.gle/JmoNaWx7dL2QJsGJ9</a></p>
 
 <ul>
 <li>There are 18 slots for each day
