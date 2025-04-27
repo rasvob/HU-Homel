@@ -56,9 +56,9 @@ Upload a **📝 Jupyter Notebook with descriptions included** or a PDF report + 
 
 * **💡 Dropbox will ask you for your name - use your VSB login please 👍**
   
-<!-- * 🎯 The final project will be presented, please choose one of the proposed dates using the Google Form URL - [https://forms.gle/2gPXAugWZJ56qk3t5](https://forms.gle/2gPXAugWZJ56qk3t5)
+* 🎯 The final project will be presented, please choose one of the proposed dates using the Google Form URL - [https://forms.gle/JmoNaWx7dL2QJsGJ9](https://forms.gle/JmoNaWx7dL2QJsGJ9)
   * There are 18 slots for each day
-    * **Please, check the table linked to the form if there is a free slot before you choose the day 👍** -->
+    * **Please, check the table linked to the form if there is a free slot before you choose the day 👍**
 
 ## Dataset
 >  *Select a dataset of your individual choice at [Kaggle](https://www.kaggle.com/) (or other data source) and drop me an email so I can approve your choice or give some recommendation.*
